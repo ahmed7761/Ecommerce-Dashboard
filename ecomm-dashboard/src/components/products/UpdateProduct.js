@@ -1,9 +1,11 @@
 import React from 'react';
+import Header from "../includes/Header";
 
 const UpdateProduct = () => {
     return (
         <div>
-            UpdateProduct
+            <Header />
+            <h1>UpdateProduct</h1>
         </div>
     );
 };

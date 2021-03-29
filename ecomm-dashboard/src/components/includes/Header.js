@@ -8,10 +8,20 @@ const Header = () => {
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand>Navbar</Navbar.Brand>
                 <Nav className="mr-auto nav-bar-wrapper">
-                    <Link to="/add">Add Product</Link>
-                    <Link to="/update">Update Product</Link>
-                    <Link to="/login">Login</Link>
-                    <Link to="/register">Register</Link>
+                    {
+                        localStorage.getItem('user-info') ?
+                            <>
+                                <Link to="/add">Add Product</Link>
+                                <Link to="/update">Update Product</Link>
+                            </>
+                            :
+                            <>
+                                <Link to="/login">Login</Link>
+                                <Link to="/register">Register</Link>
+                            </>
+                    }
+
+
                 </Nav>
             </Navbar>
         </div>
