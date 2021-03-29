@@ -30,8 +30,8 @@ const Header = () => {
                 </Nav>
                 {
                     localStorage.getItem('user-info') ?
-                        <Nav>
-                            <NavDropdown title={user && user.name}>
+                        <Nav className="pr-5">
+                            <NavDropdown title={user && user.name} className="pr-5">
                                 <NavDropdown.Item onClick={logout} >Logout</NavDropdown.Item>
                                 <NavDropdown.Item>Profile</NavDropdown.Item>
                             </NavDropdown>

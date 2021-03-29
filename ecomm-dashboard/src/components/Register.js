@@ -40,7 +40,7 @@ const Register = () => {
             <div className="col-sm-6 offset-sm-3">
                 <h1>User Sign Up</h1>
                 <br/>
-                <input type="text" value={name} placeholder="Enter Name" onChange={(e) => setName(e.target.value)} className="form-control"/>
+                <input type="text" value={name} placeholder="Enter Name" onChange={(e) => setName(e.target.value)}  className="form-control"/>
                 <br/>
                 <input type="email" value={email} placeholder="Enter Email" onChange={(e) => setEmail(e.target.value)} className="form-control"/>
                 <br/>
