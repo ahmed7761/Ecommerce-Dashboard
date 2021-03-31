@@ -19,7 +19,6 @@ const Register = () => {
     async function signup() {
 
         let item = {name, email, password}
-        console.warn(item)
         let result = await fetch('http://127.0.0.1:8000/api/register',{
             method: 'POST',
             headers: {
@@ -29,7 +28,6 @@ const Register = () => {
             body: JSON.stringify(item)
         })
         result = await result.json();
-        console.log('result', result)
         localStorage.setItem("user-info", JSON.stringify(result))
         history.push('/add')
     }
