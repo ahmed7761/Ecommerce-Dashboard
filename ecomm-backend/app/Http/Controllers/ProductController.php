@@ -15,6 +15,9 @@ class ProductController extends Controller
         $product->file_path = $request->file('file_path')->store('products');
         $product->save();
         return $product;
+    }
 
+    function productlist() {
+        return Product::all();
     }
 }
