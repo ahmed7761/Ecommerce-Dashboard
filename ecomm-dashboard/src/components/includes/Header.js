@@ -13,14 +13,14 @@ const Header = () => {
     return (
         <div>
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand>Navbar</Navbar.Brand>
+                <Navbar.Brand>E-commerce</Navbar.Brand>
                 <Nav className="mr-auto nav-bar-wrapper">
                     {
                         localStorage.getItem('user-info') ?
                             <>
                                 <Link to="/">Product List</Link>
                                 <Link to="/add">Add Product</Link>
-                                <Link to="/update">Update Product</Link>
+                                <Link to="/search">Search Product</Link>
                             </>
                             :
                             <>

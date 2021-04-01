@@ -8,6 +8,7 @@ import AddProduct from "./components/products/AddProduct";
 import UpdateProduct from "./components/products/UpdateProduct";
 import Protected from "./components/Protected";
 import ProductList from "./components/products/ProductList";
+import SearchProduct from "./components/products/SearchProduct";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
                 </Route>
                 <Route path="/update/:id">
                     <Protected Cmp={UpdateProduct} />
+                </Route>
+                <Route path="/search">
+                    <Protected Cmp={SearchProduct} />
                 </Route>
             </Switch>
         </BrowserRouter>
