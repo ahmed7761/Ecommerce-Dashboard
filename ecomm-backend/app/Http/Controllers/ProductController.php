@@ -30,4 +30,8 @@ class ProductController extends Controller
             return ['error' => 'Product deleting failed'];
         }
     }
+
+    function getProduct($id) {
+        return Product::find($id);
+    }
 }
