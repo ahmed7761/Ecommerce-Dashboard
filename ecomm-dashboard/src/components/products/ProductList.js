@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Header from "../includes/Header";
 import {Table} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 const ProductList = () => {
 
@@ -49,7 +50,10 @@ const ProductList = () => {
                                 <td><img width='80' height='80' src={'http://127.0.0.1:8000/'+item.file_path} /></td>
                                 <td>{item.description}</td>
                                 <td>{item.price}</td>
-                                <td><button className='btn btn-primary btn-sm' onClick={() => deleteOperation(item.id)}>Delete</button></td>
+                                <td>
+                                    <button className='btn btn-danger btn-sm' onClick={() => deleteOperation(item.id)}>Delete</button>
+                                    <Link to={'update/'+item.id} className='btn btn-info btn-sm ml-2'>Update</Link>
+                                </td>
                             </tr>
                         )
                     }
