@@ -34,7 +34,7 @@ const Header = () => {
                         <Nav className="pr-5">
                             <NavDropdown title={user && user.name} className="pr-5">
                                 <NavDropdown.Item onClick={logout} >Logout</NavDropdown.Item>
-                                <NavDropdown.Item>Profile</NavDropdown.Item>
+                                <NavDropdown.Item><Link to={'/profile/'+user.id}>Profile</Link></NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                         : null
