@@ -16,8 +16,6 @@ const AddProduct = () => {
         formData.append('price', price)
         formData.append('description', description)
 
-        console.log(formData)
-
         let result = await fetch("http://127.0.0.1:8000/api/addproduct", {
             method: 'POST',
             body: formData

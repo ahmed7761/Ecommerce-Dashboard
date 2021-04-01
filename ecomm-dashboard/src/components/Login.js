@@ -28,6 +28,7 @@ const Login = () => {
         result = await result.json()
 
         if(result['error']) {
+            alert('Incorrect Email or Password')
             history.push('/login')
         }
         else {
